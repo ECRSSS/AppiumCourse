@@ -11,4 +11,12 @@ public class MainClassTest {
     public void assertClassNumberTest() {
         Assert.assertTrue("Результат вычисления не больше 45", new MainClass().getClassNumber() > 45);
     }
+
+    @Test
+    public void testGetClassString() {
+        Assert.assertTrue("Строка не содержит подстроку hello|Hello",
+                new MainClass().getClassString().contains("hello")
+                        | new MainClass().getClassString().contains("Hello"));
+    }
+
 }
